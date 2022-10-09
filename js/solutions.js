@@ -1,4 +1,5 @@
-//1. Add an event listener to the Adidas Brand element (id of brand1) that will toggle the description when clicked.
+// 1. Adidas Yeezy
+//Add an event listener to the Adidas Brand element (id of brand1) that will toggle the description of the shoe when clicked.
 
 brand1.addEventListener('click', showDescrip);
 
@@ -10,20 +11,21 @@ function showDescrip(){
     }
 }
 
+// 2. Adidas x Allbirds
+//Add an event listener to the Adidas x AllbirdsBrand element (id of brand2) that will toggle the description of the shoe when clicked.
 
-// 2. Add an event listener to the Price element for the Adidas x Allbirds shoe that will change the price from USD to JPY when clicked and vice versa.
+brand2.addEventListener('click', displayDescription);
 
-price2.addEventListener('click', showPrice);
-
-function showPrice(){
-    if(amt2.innerHTML === '$120'){
-        amt2.innerHTML = '¥13,845';
+function displayDescription(){
+    if(descrip2.style.visibility === 'visible'){
+        descrip2.style.visibility = 'hidden'
     }else{
-        amt2.innerHTML = '$120';
+        descrip2.style.visibility = 'visible';
     }
 }
 
-//3. Add an event listener to the Quantity element for the Adidas Tokio Solar Hu shoe that will increase the Quantity by one each time it is clicked.
+//3. Adidas Human Race
+//Add an event listener to the Quantity element for the Adidas Tokio Solar Hu shoe that will increase the Quantity by 1 each time it is clicked.
 
 remain3.addEventListener('click', showQty);
 
@@ -31,76 +33,73 @@ function showQty(){
     qty3.innerHTML++;
 }
 
-//4. Add event listeners to all the Brand elements for the Nike shoes that will toggle the description for the respective shoe when clicked.
+//4. Nike Air Jordan
+//Add an event listener to the Price element for the Nike Air Jordan shoe that will change the price from USD to JPY when clicked and vice versa.
+//(you can use '¥43,618' for the Yen amount )
+price4.addEventListener('click', showPrice);
 
-let brandElem = document.getElementsByClassName('brand');
-
-for(let i = 0; i<brandElem.length; i++){
-    brandElem[i].addEventListener('click', showDesc );
-}
-
-function showDesc(){
-    let descElem = this.querySelector('.descrip');
-    if(descElem.style.visibility === 'visible'){
-        descElem.style.visibility = 'hidden';
+function showPrice(){
+    if(amt4.innerHTML === '$300'){
+        amt4.innerHTML = '¥43,618';
     }else{
-        descElem.style.visibility = 'visible';
+        amt4.innerHTML = '$300';
     }
 }
 
-/*5 Add an event listener to the price element for the Nike Mag shoe that will:
-1. create an alert that says 'WAAAT!?!?! 50% OFF!!!'
-2. changes the price from $50,000 to $25,000
-3. the $25,000 should be in #EC1818'
+//Nike Air Mags
+//Add an event listener to the img element for the Nike Air Mag Shoe that will change the shoe image to an iconic movie that made this shoe popular after hovering (mouseover) over the shoe image and vice versa.
 
-*/
-
-let priceElem = document.getElementsByClassName('price');
-
-priceElem[1].addEventListener('click', discount);
-
-function discount(){
-    let amtElem = this.querySelector('.amt');
-    window.alert('WAAAT!?!?! 50% OFF!!!');
-    amtElem.innerHTML = '$25,000';
-    amtElem.style.color = '#EC1818';
-    
-}
-
-/*6 Add an event listener to the img element for the Nike Air Jordan 14 x CLOT 'Terracotta' Shoe that will
-change the shoe image to a Terracotta Soldier image after hovering over the shoe image and vice versa.
-
-You can use this image for the Terracotta Soldier"
-'https://media.entertainmentearth.com/assets/images/41e0e13f4ebd4a6aa808c0c42d8804e3xl.jpg'
-
-*/
+//Use this image for the iconic movie"
+//'https://static.wikia.nocookie.net/bttf/images/f/fd/Back_To_The_Future_Nike_Shoes.jpg/'
 
 let imgElem = document.getElementsByTagName('img');
 
 for(let i = 0; i<imgElem.length; i++){
-    imgElem[5].addEventListener('click', changeImg);
+    imgElem[4].addEventListener('mouseover', changeImg);
 }
 
 function changeImg(){
-    if(imgElem[5].src === 'https://cdn.flightclub.com/1250/TEMPLATE/205734/1.jpg'){
-        imgElem[5].src = 'https://media.entertainmentearth.com/assets/images/41e0e13f4ebd4a6aa808c0c42d8804e3xl.jpg'
+    if(imgElem[4].src === 'https://cdn.flightclub.com/TEMPLATE/090135/1.jpg'){
+        imgElem[4].src = 'https://static.wikia.nocookie.net/bttf/images/f/fd/Back_To_The_Future_Nike_Shoes.jpg/';
     }else{
-        imgElem[5].src = 'https://cdn.flightclub.com/1250/TEMPLATE/205734/1.jpg'
+        imgElem[4].src = 'https://cdn.flightclub.com/TEMPLATE/090135/1.jpg';
     }  
 }
 
+//6. Nike Kyrie
+//Add an event listener to all of the Nike shoes (Air Jordan, Air Mags, and Kyrie) that will toggle the description of the respective shoe when the brand element is clicked.
 
-plus.addEventListener('click', add);
+let nikeBrand = document.getElementsByClassName('brand');
 
-function add(){
-    total.innerHTML++;
+for(let i =0; i<nikeBrand.length; i++){
+    nikeBrand[i].addEventListener('click', showNikeDesc);
 }
 
-minus.addEventListener('click', subtract);
-
-function subtract(){
-    total.innerHTML--;
+function showNikeDesc(){
+    let nikeBrandDesc = this.querySelector('.nikeDesc');
+    if(nikeBrandDesc.style.visibility === 'visible'){
+        nikeBrandDesc.style.visibility = 'hidden';
+    }else{
+        nikeBrandDesc.style.visibility = 'visible';
+    }
 }
+
+
+
+
+
+
+// plus.addEventListener('click', add);
+
+// function add(){
+//     total.innerHTML++;
+// }
+
+// minus.addEventListener('click', subtract);
+
+// function subtract(){
+//     total.innerHTML--;
+// }
 
 
 //8.

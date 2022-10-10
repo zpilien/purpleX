@@ -104,10 +104,10 @@ function plusItem(){
 let amountBox = document.getElementsByClassName('amount');
 
 for(let i = 0; i<amountBox.length; i++){
-    amountBox[i].addEventListener('click', showPrice);
+    amountBox[i].addEventListener('click', displayPrice);
 }
 
-function showPrice(){
+function displayPrice(){
     let priceBox = this.querySelector('.price');
     if(priceBox.style.display === 'block'){
         priceBox.style.display = 'none';

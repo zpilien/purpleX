@@ -25,7 +25,7 @@ function displayDescription(){
 }
 
 //3. Adidas Human Race
-//Add an event listener to the Quantity element for the Adidas Tokio Solar Hu shoe that will increase the Quantity by 1 each time it is clicked.
+//Add an event listener to the Quantity element for the Adidas Tokio Solar Hu shoe that will increase the Quantity by 1 each time Quantity is clicked.
 
 remain3.addEventListener('click', showQty);
 
@@ -46,7 +46,7 @@ function showPrice(){
     }
 }
 
-//Nike Air Mags
+//5. Nike Air Mags
 //Add an event listener to the img element for the Nike Air Mag Shoe that will change the shoe image to an iconic movie that made this shoe popular after hovering (mouseover) over the shoe image and vice versa.
 
 //Use this image for the iconic movie"
@@ -84,50 +84,49 @@ function showNikeDesc(){
     }
 }
 
+//7. Saucony Shadow
+//Add an event listener to the Quantity elements for the Saucony, Asics and Pizza Hut shoes that will increase the Quantity by 1 each time Quantity is clicked.
 
+let addItem = document.getElementsByClassName('purchases');
 
+for(let i = 0; i<addItem.length; i++){
+    addItem[i].addEventListener('click', plusItem);
+}
 
+function plusItem(){
+  let orderBox = this.querySelector('.orders');
+  orderBox.innerHTML++; 
+}
 
+//8. Asics Onitsuka Tiger
+//Add an event listener to the Price elements of Saucony, Asics and Pizza Hut shoes that will toggle the price of the respective shoe when clicked.
 
-// plus.addEventListener('click', add);
+let amountBox = document.getElementsByClassName('amount');
 
-// function add(){
-//     total.innerHTML++;
-// }
+for(let i = 0; i<amountBox.length; i++){
+    amountBox[i].addEventListener('click', showPrice);
+}
 
-// minus.addEventListener('click', subtract);
+function showPrice(){
+    let priceBox = this.querySelector('.price');
+    if(priceBox.style.display === 'block'){
+        priceBox.style.display = 'none';
+    }else{
+        priceBox.style.display = 'block';
+    }
+}
 
-// function subtract(){
-//     total.innerHTML--;
-// }
+//9. Pizza Hut
 
+// let blockCards = document.getElementsByClassName('block3');
+// console.log(blockCards[2])
 
-//8.
+// let divElem = document.createElement('div');
+// divElem.className = 'amount';
+// divElem.innerHTML = 'Price';
+// blockCards[2].appendChild(divElem)
 
-//9.
-
-// 1. Add an event to the 'See Details' content that will create an alert box that says 'Not Available in Hawaii.' after clicking on See Details.
-
-//2. Add an event to the div element with the id of 'name1' that will show/hide the description ('descrip1') after hovering over Air Jordan II.
-
-//3. Add an event to the div element with the id of 'name2' that will show/hide the following description after clicking on the element.
-//'The instantly recognizable Jumpman silhouette made its debut with the Air Jordan 3 during Michael Jordan's 1987-88 NBA season.'
-
-
-//You'll need to:
-// create a div element with an id of 'descrip2'
-//append this element to the div element with the id of 'name2' 
-
-//4. Add events to the all the thumbs up icon that will add a count for each time the icon is clicked on for any shoe.
-
-//5. Add an event to the plus icon that will increment the price of the Air Jordan V shoe each time the icon is clicked on.
-
-//6. Add an event to the minus icon that will decrement the price of the Air Jordan VI shoe each time the icon is clicked on.
-
-//7. Add an event to the Air Jordan XI shoe that will show another colorway for that shoe after hovering over the image. 
-
-//8. Add an event to the Air Jordan XII shoe that will increase the image by 50% after clicking on the image.
-
-//9. Add events to both the plus and minus icon that will add or decrease the price each time the respective icon is clicked on.
-
-//10. Add an event to the Air Jordan XXVIII shoe that will show the famous 'crying Michael Jordan' meme after clicking on the image.
+// let pElem = document.createElement('p');
+// pElem.className = 'price';
+// pElem.innerHTML = "$375";
+// divElem.appendChild(pElem);

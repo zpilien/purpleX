@@ -31,6 +31,10 @@ img{
     border: 1px solid lightgray;
 }
 
+.block1:hover, .block2:hover, .block3:hover {
+    border: 2px solid #7FFF00;
+}
+
 #brand1, #price2, #remain3, .brand,.price{
     cursor: pointer;
 }
@@ -41,6 +45,10 @@ img{
 
 .nikeDesc{
     visibility: hidden;
+}
+
+.price{
+    display: none;
 }
 
 #plus, #minus{

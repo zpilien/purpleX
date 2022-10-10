@@ -34,8 +34,8 @@ function showQty(){
 }
 
 //4. Nike Air Jordan
-//Add an event listener to the Price element for the Nike Air Jordan shoe that will change the price from USD to JPY when clicked and vice versa.
-//(you can use '¥43,618' for the Yen amount )
+//Add an event listener to the Price element for the Nike Air Jordan shoe that will change the price from USD to JPY when clicked and vice versa. (you can use '¥43,618' for the Yen amount )
+
 price4.addEventListener('click', showPrice);
 
 function showPrice(){
@@ -49,7 +49,7 @@ function showPrice(){
 //5. Nike Air Mags
 //Add an event listener to the img element for the Nike Air Mag Shoe that will change the shoe image to an iconic movie that made this shoe popular after hovering (mouseover) over the shoe image and vice versa.
 
-//Use this image for the iconic movie"
+//Use this image for the iconic movie: 
 //'https://static.wikia.nocookie.net/bttf/images/f/fd/Back_To_The_Future_Nike_Shoes.jpg/'
 
 let imgElem = document.getElementsByTagName('img');

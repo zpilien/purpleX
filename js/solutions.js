@@ -85,7 +85,7 @@ function showNikeDesc(){
 }
 
 //7. Saucony Shadow
-//Add an event listener to the Quantity elements for the Saucony, Asics and Pizza Hut shoes that will increase the Quantity by 1 each time Quantity is clicked.
+//Add an event listener to the Quantity elements for the Saucony and Asics and shoes that will increase the Quantity by 1 each time Quantity is clicked.
 
 let addItem = document.getElementsByClassName('purchases');
 
@@ -117,16 +117,32 @@ function displayPrice(){
 }
 
 //9. Pizza Hut
+//There are a couple of missing HTML elements that you'll need to create. Please create a div element with the following details:
+//the div element will have an id of 'qtyItems'
+//the innerHTML will be 'Quantity'
+//add an event listener with a click action and function name of editTotalOrders
+//append this div element to Pizza Hut shoe 
 
-// let blockCards = document.getElementsByClassName('block3');
-// console.log(blockCards[2])
+//Next, create a paragraph element with following details:
+//the p element will have an id of 'tally'
+//the innerHTML will be '1'
+//append this p element to the above div element that you just created
 
-// let divElem = document.createElement('div');
-// divElem.className = 'amount';
-// divElem.innerHTML = 'Price';
-// blockCards[2].appendChild(divElem)
+//Last step, create a function editTotalOrders that will that will increase the Quantity by 1 each time Quantity is clicked.
 
-// let pElem = document.createElement('p');
-// pElem.className = 'price';
-// pElem.innerHTML = "$375";
-// divElem.appendChild(pElem);
+let blockCards = document.getElementsByClassName('block3');
+
+let divElem = document.createElement('div');
+divElem.id = 'qtyItems';
+divElem.innerHTML = 'Quantity';
+divElem.addEventListener('click', editTotalOrders)
+blockCards[2].appendChild(divElem)
+
+let pElem = document.createElement('p');
+pElem.id = 'tally';
+pElem.innerHTML = "1";
+divElem.appendChild(pElem);
+
+function editTotalOrders(){
+   tally.innerHTML++;
+}

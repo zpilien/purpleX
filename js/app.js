@@ -1,6 +1,19 @@
 // 1. Adidas Yeezy
 //Add an event listener to the Adidas Brand element (id of brand1) that will toggle the description of the shoe when clicked.
+let YeezyBrand = document.getElementById('brand1');
 
+YeezyBrand.addEventListener('click', showBrand);
+
+function showBrand(){
+    //console.log('test')
+    let descripElem = document.getElementById('descrip1');
+    if (descripElem.style.visibility === 'visible'){
+        descripElem.style.visibility = 'hidden';
+    }
+    else{
+        descripElem.style.visibility = 'visible';
+    }
+}
 
 // 2. Adidas x Allbirds
 //Add an event listener to the Adidas x AllbirdsBrand element (id of brand2) that will toggle the description of the shoe when clicked.

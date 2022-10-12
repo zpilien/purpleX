@@ -18,9 +18,32 @@ function showBrand(){
 // 2. Adidas x Allbirds
 //Add an event listener to the Adidas x AllbirdsBrand element (id of brand2) that will toggle the description of the shoe when clicked.
 
+let birdBrand = document.getElementById('brand2');
+
+birdBrand.addEventListener('click', showBrand2);
+
+function showBrand2(){
+    let descripElem = document.getElementById('descrip2');
+    if (descripElem.style.visibility === 'visible'){
+        descripElem.style.visibility = 'hidden';
+    }
+    else{
+        descripElem.style.visibility = 'visible';
+    }
+}
+
 
 //3. Adidas Human Race
 //Add an event listener to the Quantity element for the Adidas Tokio Solar Hu shoe that will increase the Quantity by 1 each time Quantity is clicked.
+
+let TokioNum = document.getElementById('qty3');
+TokioNum.addEventListener('click', countUp);
+
+function countUp(){
+    TokioNum.innerHTML++;
+}
+
+
 
 
 //4. Nike Air Jordan

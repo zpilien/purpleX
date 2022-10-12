@@ -103,10 +103,35 @@ for (i=0; i<brandBox.length; i++){
 //7. Saucony Shadow
 //Add an event listener to the Quantity elements for the Saucony and Asics and shoes that will increase the Quantity by 1 each time Quantity is clicked.
 
+let qtyBag = document.getElementsByClassName('purchases');
+console.log(qtyBag);
+
+for (i=0; i<qtyBag.length; i++){
+    qtyBag[i].addEventListener('click', orderUp)
+}
+
+function orderUp(){
+    let orderNum = this.querySelector('.orders')
+    orderNum.innerHTML++;
+}
 
 //8. Asics Onitsuka Tiger
 //Add an event listener to the Price elements of Saucony, Asics and Pizza Hut shoes that will toggle the price of the respective shoe when clicked.
 
+let shoeCost = document.getElementsByClassName('amount');
+for (i=0; i<shoeCost.length; i++){
+    shoeCost[i].addEventListener('click', givePrice);
+}
+
+function givePrice(){
+    let costAmt = this.querySelector('.price');
+    if (costAmt.style.display === 'block'){
+        costAmt.style.display = 'none';
+    }
+    else {
+        costAmt.style.display = 'block';
+    }
+}
 
 //9. Pizza Hut
 //There are a couple of missing HTML elements that you'll need to create. Please create a div element with the following details:
@@ -115,10 +140,27 @@ for (i=0; i<brandBox.length; i++){
 //add an event listener with a click action and function name of editTotalOrders
 //append this div element to Pizza Hut shoe 
 
+let blockBag = document.getElementsByClassName('block3');
+
+let pizzaElem = document.createElement('div');
+pizzaElem.id = 'qtyItems';
+pizzaElem.innerHTML = 'Quantity';
+pizzaElem.addEventListener('click', editTotalOrders);
+blockBag[2].appendChild(pizzaElem);
+
+
 //Next, create a paragraph element with following details:
 //the p element will have an id of 'tally'
 //the innerHTML will be '1'
 //append this p element to the above div element that you just created
 
+let pizzaPar = document.createElement('p');
+pizzaPar.id = 'tally';
+pizzaPar.innerHTML = '1';
+pizzaElem.appendChild(pizzaPar);
+
 //Last step, create a function editTotalOrders that will that will increase the Quantity by 1 each time Quantity is clicked.
 
+function editTotalOrders(){
+    pizzaPar.innerHTML++;
+}

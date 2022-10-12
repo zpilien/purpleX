@@ -43,12 +43,21 @@ function countUp(){
     TokioNum.innerHTML++;
 }
 
-
-
-
 //4. Nike Air Jordan
 //Add an event listener to the Price element for the Nike Air Jordan shoe that will change the price from USD to JPY when clicked and vice versa. (you can use '¥43,618' for the Yen amount )
 
+let jordanPrice = document.getElementById('price4');
+jordanPrice.addEventListener('click', convertJPY);
+
+function convertJPY(){
+    let jorCost = document.getElementById('amt4');
+    if (jorCost.innerHTML === '$300'){
+        jorCost.innerHTML = '¥43,618';
+    }
+    else{
+        jorCost.innerHTML = '$300';
+    }
+}
 
 //5. Nike Air Mags
 //Add an event listener to the img element for the Nike Air Mag Shoe that will change the shoe image to an iconic movie that made this shoe popular after hovering (mouseover) over the shoe image and vice versa.

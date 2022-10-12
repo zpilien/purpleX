@@ -65,10 +65,40 @@ function convertJPY(){
 //Use this image for the iconic movie: 
 //'https://static.wikia.nocookie.net/bttf/images/f/fd/Back_To_The_Future_Nike_Shoes.jpg/'
 
+let shoePics = document.getElementsByTagName('img');
+console.log(shoePics);
+
+shoePics[4].addEventListener('mouseover', showFilm);
+
+function showFilm(){
+    if (shoePics[4].src === 'https://cdn.flightclub.com/TEMPLATE/090135/1.jpg'){
+        shoePics[4].src = 'https://static.wikia.nocookie.net/bttf/images/f/fd/Back_To_The_Future_Nike_Shoes.jpg/';
+    }
+    else {
+        shoePics[4].src = 'https://cdn.flightclub.com/TEMPLATE/090135/1.jpg';
+    }
+}
 
 //6. Nike Kyrie
 //Add an event listener to all of the Nike shoes (Air Jordan, Air Mags, and Kyrie) that will toggle the description of the respective shoe when the brand element is clicked.
 
+let brandBox = document.getElementsByClassName('brand');
+console.log(brandBox);
+
+for (i=0; i<brandBox.length; i++){
+    brandBox[i].addEventListener('click', showBrand3);
+}
+    function showBrand3(){
+        let descBox = this.querySelector('.nikeDesc');
+        //for (i=0; i<descBox.length; i++){
+        if (descBox.style.visibility === 'visible'){
+            descBox.style.visibility = 'hidden';
+        }
+        else {
+            descBox.style.visibility = 'visible';
+        }
+    }
+ 
 
 //7. Saucony Shadow
 //Add an event listener to the Quantity elements for the Saucony and Asics and shoes that will increase the Quantity by 1 each time Quantity is clicked.
